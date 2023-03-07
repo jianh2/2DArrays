@@ -41,9 +41,13 @@ import java.util.*;
     // i.e. the row count multiplied by the column count.
     public static int totalElements(int[][] numArray)
     {
+        int count  = 0;
       for(int i = 0; i < numArray.length; i++){
-          
+          for(int j = 0; j < numArray[i].length; j++){
+              count++;
+          }
       }
+      return count;
     }
 
     // Write the fourCorners below to print out the elements
@@ -51,6 +55,15 @@ import java.util.*;
     // top left, then top right, then bottom left, then bottom right
     public static void fourCorners(String[][] strArray)
     {
-        /* IMPLEMENT ME! */
+        int columns = strArray[0].length-1;
+
+        String topLeft = strArray[0][0];
+        String topRight = strArray[0][columns];
+        String bottomLeft = strArray[strArray.length-1][0];
+        String bottomRight = strArray[strArray.length-1][columns];
+        System.out.println(topLeft);
+        System.out.println(topRight);
+        System.out.println(bottomLeft);
+        System.out.println(bottomRight);
     }
 }
